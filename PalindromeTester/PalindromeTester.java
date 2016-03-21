@@ -43,4 +43,16 @@ public class PalindromeTester
          another = s.nextLine();
       }
    }
+   
+   public static boolean isPalindrome(String str)
+   {
+       if (string.length() <= 1)
+       {
+           return true;
+       }
+       
+       String substr = str.substring(1,str.length() -1);
+       
+       return ((str.charAt(0) == str.charAt(str.length()-1)) &&isPalindrome(substr));
+   }
 }
